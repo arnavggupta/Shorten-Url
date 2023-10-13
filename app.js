@@ -1,10 +1,13 @@
+
+require('dotenv').config()
 const express=require("express");
 const app=express();
-require("./db/conn");
+const connectdb=require("./db/conn");
 const hbs=require("hbs");
 const apth=require("path");
 const port=process.env.PORT||8000;
 const path=require("path");
+connectdb();
 // const generateshorturl=require("./controllers/url");
 // const urlroutes=require("./routers/routes");
 // app.use("url",urlroutes);
